@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/karthiklingams364/devops-capstone-nodejs.git'
+                git branch: 'main', url: 'https://github.com/karthiklingams364/devops-capstone.git'
             }
         }
 
