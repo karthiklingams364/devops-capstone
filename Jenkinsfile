@@ -10,13 +10,15 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/karthiklingams364/devops-capstone-nodejs.git'
+                git branch: 'main', url: 'https://github.com/karthiklingams364/devops-capstone-nodejs.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE .'
+                sh '''
+                docker build -t $IMAGE .
+                '''
             }
         }
 
